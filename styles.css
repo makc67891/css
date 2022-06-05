@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* *{
+    padding: 0;
+    margin: 0;
+} 
+обращение ко всем элементам
+padding - внутренние отступы
+margin - внешние отступы*/
+
+body {
+    background-color: #f1f1f1;
+    color: #0f141e;
+
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+    /* font-family:'Times New Roman', Times, serif */
+    /* font: normal 16px 'Roboto', sans-serif; */
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Обращение к ссылкам */
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* После наведения курсора на текст */
+
+a:active {
+    color: blue;
+}
+
+/* Если нажать на ссылку и держать */
+
+a:visited {
+    color: grey;
+}
+
+/* Цвет ссылки после посещения */
+
+.avatar {
+    width: 200px;
+    border-radius: 28px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 025);
+}
+
+.info {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+@media (max-width: 700px){
+    .info{
+        display: block;
+        text-align: center;
+    }
+}
+
+.info-text{
+    margin-left: 40px;
+}
+
+.info-text h4{
+    margin-bottom: 10px;
+}
+
+.info p {
+    color: #86898f;
+    margin: 0;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    /* text-decoration: underline; подчеркнутый текст */
+    /* text-transform: uppercase; все большие буквы */
+    /* letter-spacing: 5px; расстояние между буквами */
+    /* word-spacing: 42px; расстояние между словами */
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+/*  тренировочное
+    .social{
+    background: green;
+    padding: 15px; */
+/* padding: 15px 20px 25px 30px; можно сразу все указать */
+/* padding-left: 20px; можно каждую сторону отдельно */
+/* margin: 20px; */
+/* аналогично для margin */
+/* border: 5px solid red;
+    border-bottom-style: dotted;
+    border-top-width: 15px;
+    border-right-color: blue;
+} */
+
+/*  как сделать 4 бокса по 25% 
+    в одну полосу с учетом border
+    > - означает обращение ко всем дочерним дивам
+    див в диве принимать данные значения не будет
+    .box-model > div{
+    float: left;
+    background: black;
+    height: 200px;
+    width: 25%;
+    border: 4px solid red;
+    box-sizing: border-box;
+} */
+
+.bg-yellow {
+    background: #fff9dc;
+}
+
+.bg-green {
+    background: #e5ffe7;
+}
+
+.bg-red {
+    background: #ffe5e5;
+}
+
+.card {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.list {
+    padding: 0px 20px;
+    /* list-style: none; убрать цифры в списке */
+}
+
+.list li {
+    color: #86898f;
+    margin-bottom: 10px;
+    /* border-bottom: 1px solid grey; */
+}
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    padding-bottom: 10px;
+}
+
+.table td:nth-child(2),
+.table td:nth-child(3) {
+    color: #86898f;
+}
+
+/* .table tr:nth-child(odd){
+    background: red;
+} фон каждой нечетной строчке
+even - каждой четной строчке */
+
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.form-group label {
+    display: block;
+    /* label - строчный элемент. display block блокирует строку */
+    font-size: 14px;
+    color: #86898f;
+}
+
+.form-group input,
+.form-group textarea {
+    /* textarea - окно для ввода сообщения */
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    /* прозрачный background */
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    padding: 15px 0 10px;
+    outline: none;
+    /* при нажатии на input для ввода данных убрать синюю границу */
+    font-family: inherit;
+    /* при вводе был другой шрифт. inherit - наследование шрифта */
+
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.row>.form-group {
+    width: 50%;
+}
+
+.row .form-group:first-child {
+    margin-right: 20px;
+}
+
+.btn{
+    background: #111;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    /* меняется курсор когда наводишь на кнопку */
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+/* hover - срабатывает когда наводят на элемент мышью */
+/* opacity - устанавливает непрозрачность */
+
+/* .position{
+    border: 4px solid black;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.box{
+    width: 50px;
+    height: 50px;
+    background: aqua;
+    position:fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 50%;  */
+
+    /* position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%; 
+    навигация на сайте*/
+
+    /* position:fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 50%; 
+    фиксированная кнопка в углу экрана*/
+/* } */
